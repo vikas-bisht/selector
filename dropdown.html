@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script type=text/javascript>
+			$(document).ready(function(){
+				$("#add").click(function(){
+					$("#two").append('<div> <input type="textbox" name=""> <input type="button"  value="Browse" name=""> <select><option>Primary Image</option>	<option>Secondary Image</option> </select> <input type="button" value="remove" id="remove"/> </div>');
+				})
+				$('#two').on("click", "#remove", function(e) { 
+          			  $(this).parent('div').remove();
+     			});
+			});
+		</script>
+	</head>
+	<body>
+		<div class="container">
+			<div class="header">
+				Property Image
+			</div>
+			<div class="one">
+				Property Image
+			</div>
+			<div class="main">
+				<div>
+					<div class="two" id="two">
+						<div class="div">
+							<input type="textbox" name="">
+							<input type="button"  value="Browse" name="">
+							<select>
+								<option>Primary Image</option>
+								<option>Secondary Image</option>
+							</select>
+						</div>
+					</div>
+				<div>
+					<div class="footer">
+						<a href="#" id="add">Add Another</a>
+					</div>
+				</div>	
+			</div>
+		</div>
+	</body>
+</html>
+<style>
+	.header
+	{
+		padding: 10px 0 10px 0;
+		border:1px solid lightgrey;
+	}
+	.one
+	{
+		float: left;
+		padding: 50px 20px 20px 7px;
+	}
+	.two
+	{
+		overflow: auto;
+		padding: 50px 10px 10px 8px;
+	}
+	.container
+	{
+		border:1px solid grey;
+		width: 80%;
+		margin: auto;
+	}
+	.main
+	{
+		overflow: auto;
+		border:1px solid lightgrey;
+	}
+</style>
